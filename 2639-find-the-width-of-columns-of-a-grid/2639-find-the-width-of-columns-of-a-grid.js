@@ -5,7 +5,7 @@
 var findColumnWidth = function(grid) {
     const ans = [];
     const lengthCheck = (num) => {
-        return String(num).length;
+        return num.toString().length;
     };
     
     for (let i = 0; i < grid[0].length; i++) {
