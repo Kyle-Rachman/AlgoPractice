@@ -3,8 +3,8 @@
  * @return {number[]}
  */
 var findColumnWidth = function(grid) {
-    let ans = [];
-    let lengthCheck = (num) => {
+    const ans = [];
+    const lengthCheck = (num) => {
         if (num >= 0) {
             return num.toString().length;
         } else {
