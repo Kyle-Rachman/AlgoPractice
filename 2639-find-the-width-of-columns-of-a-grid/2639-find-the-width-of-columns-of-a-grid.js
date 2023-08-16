@@ -3,7 +3,7 @@
  * @return {number[]}
  */
 var findColumnWidth = function(grid) {
-    let ans = Array(grid[0].length).fill(0);
+    let ans = [];
     let lengthCheck = (num) => {
         if (num >= 0) {
             return num.toString().length;
@@ -17,7 +17,7 @@ var findColumnWidth = function(grid) {
         for (let j = 0; j < grid.length; j++) {
             maxLen = Math.max(lengthCheck(grid[j][i]),maxLen);
         };
-        ans[i] = maxLen;
+        ans.push(maxLen)
     };
     
     return ans;
