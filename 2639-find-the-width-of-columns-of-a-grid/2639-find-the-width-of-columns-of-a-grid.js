@@ -12,10 +12,12 @@ var findColumnWidth = function(grid) {
         }
     };
     
-    for (let i = 0; i < grid.length; i++) {
-        for (let j = 0; j < grid[i].length; j++) {
-            ans[j] = Math.max(lengthCheck(grid[i][j]),ans[j]);
+    for (let i = 0; i < grid[0].length; i++) {
+        let maxLen = 0;
+        for (let j = 0; j < grid.length; j++) {
+            maxLen = Math.max(lengthCheck(grid[j][i]),maxLen);
         };
+        ans[i] = maxLen;
     };
     
     return ans;
