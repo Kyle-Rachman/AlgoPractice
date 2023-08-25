@@ -3,13 +3,9 @@
  * @return {number}
  */
 var addDigits = function(num) {
-    while (num.toString().length > 1) {
-        let newnum = 0;
-        for (char of num.toString()) {
-            newnum += Number(char);
-        }
-        num = newnum;
-        console.log(num)
+    if (num == 0) {
+        return 0
+    } else {
+        return (1 + (num-1) % 9)
     };
-    return num;
 };
