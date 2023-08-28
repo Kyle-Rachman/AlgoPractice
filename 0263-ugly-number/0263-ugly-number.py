@@ -7,19 +7,13 @@ class Solution(object):
         if n == 0:
             return False
         
-        p_2, p_3, p_5 = 0, 0, 0
-        test_2, test_3, test_5 = n, n, n
-        
-        while (test_2 % 2) == 0:
-            p_2 += 1
-            test_2 /= 2
+        while (n % 2) == 0:
+            n /= 2
             
-        while (test_3 % 3) == 0:
-            p_3 += 1
-            test_3 /= 3
+        while (n % 3) == 0:
+            n /= 3
             
-        while (test_5 % 5) == 0:
-            p_5 += 1
-            test_5 /= 5
+        while (n % 5) == 0:
+            n /= 5
             
-        return n == (2**p_2 * 3**p_3 * 5**p_5)
+        return n == 1
